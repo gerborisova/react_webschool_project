@@ -1,28 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { PureComponent } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-
-        >
-          
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//React.createElement
+//       &&
+//Functional component
+function Element1() {
+  return  React.createElement('h1',null, 'Hello World created with createElement method');
 }
 
-export default App;
+//React Class component
+//      &&
+//React.Component
+class Element2 extends React.Component{
+  render() {
+    return <h1>Hello World created with React.Component method</h1>
+  }
+}
+
+//React.PureComponent
+class Element3 extends React.PureComponent{
+  render() {
+    return (
+    <React.Fragment>
+      <h1>Hello World created with React.PureComponent method</h1>
+      <span>(I only work right if my props and state are immutable) </span>
+    </React.Fragment>
+    )
+  }
+}
+
+//Functional Component 
+function Element4() {
+    return <h1>Hello World created with a functional component</h1>
+  
+}
+
+
+export  {Element1, Element2, Element3, Element4};

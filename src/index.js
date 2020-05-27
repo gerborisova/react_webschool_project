@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import {Element1, Element2, Element3, Element4} from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Element1 />
+    <Element2 />
+    <Element3 />
+    <Element4 />
+
   </React.StrictMode>,
   document.getElementById('root')
 );
